@@ -4,6 +4,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from "./pages/home/Home.jsx";
 import ErrorPage from "./components/errorPage/ErrorPage.jsx";
+import CategoryPage from "./pages/category/CategoryPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "categories/:category",
+        element: <CategoryPage />,
       },
     ],
   },
